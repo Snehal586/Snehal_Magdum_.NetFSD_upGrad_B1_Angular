@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Learning Course Registration Portal</title>
+</head>
+
+<body>
+
+<table border="1" width="100%">
+
+<tr>
+<td colspan="2" align="center">
+<header>
+<h1>E-Learning Course Registration Portal</h1>
+</header>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<main>
+
+<form>
+
+<table width="100%">
+
+<tr>
+<td>Select Course:</td>
+<td>
+<input list="courses" required>
+<datalist id="courses">
+<option value="React">
+<option value="Java Full Stack">
+<option value=".NET Full Stack">
+<option value="AI and ML">
+<option value="Cyber Security">
+</datalist>
+</td>
+</tr>
+
+<tr>
+<td>Batch Month:</td>
+<td>
+<input type="month" required>
+</td>
+</tr>
+
+<tr>
+<td>Session Timing:</td>
+<td>
+<input type="time" required>
+</td>
+</tr>
+
+<tr>
+<td>Skill Level:</td>
+<td>
+<input type="range" min="1" max="10" required>
+</td>
+</tr>
+
+
+<tr>
+<td>Enrollment Progress:</td>
+<td>
+<progress max="100"></progress>
+</td>
+</tr>
+
+<tr>
+<td>Introduction Video:</td>
+<td>
+<video controls width="400">
+<source src="barbi.mp4" type="video/mp4">
+<track src="" kind="subtitles" srclang="en">
+</video>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<button type="submit">Register</button>
+</td>
+</tr>
+
+</table>
+
+</form>
+
+</main>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<footer>
+<p>E-Learning Portal</p>
+</footer>
+</td>
+</tr>
+
+</table>
+
+</body>
+</html>

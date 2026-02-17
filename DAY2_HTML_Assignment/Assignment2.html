@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Appointment Booking</title>
+</head>
+
+<body>
+
+<header>
+<h1>Online Hospital Appointment System</h1>
+</header>
+
+<main>
+
+<section>
+<h2>Book Appointment</h2>
+
+<form>
+
+<label>Department:</label>
+<input list="departments" name="department" required>
+<datalist id="departments">
+<option value="Cardiology">
+<option value="Dermatology">
+<option value="Neurology">
+<option value="Orthopedics">
+<option value="Pediatrics">
+</datalist>
+
+<br><br>
+
+<label>Preferred Doctor:</label>
+<input list="doctors" name="doctor" required>
+<datalist id="doctors">
+<option value="Dr. Patil">
+<option value="Dr. Jadhav">
+<option value="Dr. Padded">
+</datalist>
+
+<br><br>
+<label>Appointment Date:</label>
+<input type="date" name="date" min="2026-01-01" required>
+
+<br><br>
+
+
+<label>
+<input type="checkbox" onclick="document.getElementById('time').disabled=this.checked">
+Emergency Case
+</label>
+
+<br><br>
+
+
+<label>Appointment Time:</label>
+<input type="time" id="time" required>
+
+<br><br>
+
+<label>Age:</label>
+<input type="number" name="age" min="1" max="120" required>
+
+<br><br>
+
+<label>Phone:</label>
+<input type="tel" pattern="[0-9]{10}" maxlength="10" required>
+
+<br><br>
+
+<label>Email:</label>
+<input type="email" required>
+
+<br><br>
+
+<label>Upload Medical Reports:</label>
+<input type="file" multiple required>
+
+<br><br>
+
+<button type="submit">Book Appointment</button>
+
+</form>
+</section>
+
+</main>
+
+<footer>
+<p>Hospital Appointment System</p>
+</footer>
+
+</body>
+</html>
