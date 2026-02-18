@@ -1,0 +1,56 @@
+body {
+    font-family: Arial;
+    background-color: #e6f2ff;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #003366;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: burlywood;
+    padding: 15px;
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    border: 2px solid #b3d9ff;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: blue;
+    color: white;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
