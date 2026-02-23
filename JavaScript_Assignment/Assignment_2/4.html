@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile Manager</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .profile {
+            border: 2px solid black;
+            width: 250px;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Student Profile</h2>
+
+<div id="profileBox" class="profile"></div>
+
+<button onclick="showProfile()">Show Profile</button>
+<button onclick="updateMarks(95)">Update Marks</button>
+
+<script>
+
+var student = {
+    name: "Snehal",
+    rollNo: 1,
+    marks: 90
+};
+
+function updateStudentProfile(studentObj) {
+    var content =
+        "Name: " + studentObj.name + "<br>" +
+        "Roll No: " + studentObj.rollNo + "<br>" +
+        "Marks: " + studentObj.marks;
+
+    document.getElementById("profileBox").innerHTML = content;
+}
+
+function showProfile() {
+    updateStudentProfile(student);
+}
+
+function updateMarks(newMarks) {
+    student.marks = newMarks;
+    updateStudentProfile(student);
+}
+
+</script>
+
+</body>
+</html>
