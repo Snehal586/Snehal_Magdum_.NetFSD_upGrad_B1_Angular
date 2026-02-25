@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h>Validation form</h>
+    <form>
+        <input type="text" id="Name" placeholder="Enter your name" onchange="validateName()">
+        <p id="Nmsg"></p>
+        <input type="text" id= "Email" placeholder="Enter your email" onchange="validateEmail()">
+        <p id="Emsg"></p>
+        <input type="text" id="age" placeholder="Enter age" onchange="validateAge()">
+        <p id="Amsg"></p>
+        <input type="button" value="Submit" onclick="savedata()">
+    </form>
+    <script>
+        function validateName()
+        {
+            let name=document.getElementById("Name").value;
+            if (name == " ") {
+                document.getElementById("Nmsg").innerHTML="Name cannot be empty";
+            }
+            else {
+                document.getElementById("Nmsg").innerHTML="Valid name";
+            }
+        }
+
+        function validateEmail() {
+        let email = document.getElementById("Email").value;
+
+        if (email.includes("@")) {
+            document.getElementById("Emsg").innerHTML ="Valid Email";
+        } 
+        else {
+            document.getElementById("Emsg").innerHTML ="Email must contain @";
+        }
+    }
+    function validateAge()
+    {
+        let age = document.getElementById("age").value;
+        if(age>18) {
+            document.getElementById("Amsg").innerHTML="valid Age";
+        }
+        else  {
+            document.getElementById("Amsg").innerHTML="Age must be greater than 18";
+        }
+    }
+
+    function savedata()
+    {
+        let name=document.getElementById("Name").value;
+        let email = document.getElementById("Email").value;
+        let age = document.getElementById("age").value;
+
+        if(name !== "" && email.includes("@") && age>18 ) {
+            sessionStorage.setItem("Name ", Name);
+            sessionStorage.setItem("Email ", Email);
+            sessionStorage.setItem("Age ", age);
+            alert("Data stored sucessfully");
+        }
+        else {
+            alert("Please enter valid details");
+        }
+
+    }
+    </script>
+</body>
+</html>

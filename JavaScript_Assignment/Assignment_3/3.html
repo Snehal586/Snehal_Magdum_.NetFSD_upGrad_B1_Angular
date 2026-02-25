@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h> Location Based Weather Logger</h>
+    <button onclick="getLocation()">Get My Location</button>
+    <p id="result"></p>
+    <h3>Last five location</h3>
+    <ul id="history"></ul>
+    <script>
+        function getLocation() {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        }
+        function showPosition(pos) {
+
+    let lat = pos.coords.latitude;
+    let long = pos.coords.longitude;
+
+    document.getElementById("result").innerHTML =
+        "Latitude: " + lat + "<br>Longitude: " + long;
+
+    let locations =
+        JSON.parse(localStorage.getItem("locations")) || [];
+
+    locations.push({
+        lat: lat,
+        long: long,
+        time: new Date().toLocaleString()
+    });
+
+    locations = locations.slice(-5);
+
+    localStorage.setItem("locations", JSON.stringify(locations));
+
+    showHistory();
+}
+
+function showError(error) {
+
+    let msg = "";
+
+    if (error.code == 1) msg = "Permission Denied";
+    else if (error.code == 2) msg = "Location Unavailable";
+    else if (error.code == 3) msg = "Timeout";
+    else msg = "Error";
+
+    document.getElementById("result").innerHTML = msg;
+}
+
+function showHistory() {
+
+    let data =
+        JSON.parse(localStorage.getItem("locations")) || [];
+
+    let list = document.getElementById("history");
+    list.innerHTML = "";
+
+    data.forEach(loc => {
+        list.innerHTML +=
+            "<li>" + loc.lat + ", " +
+            loc.long + " (" + loc.time + ")</li>";
+    });
+}
+    </script>
+
+</body>
+</html>

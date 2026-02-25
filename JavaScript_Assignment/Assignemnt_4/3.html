@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shopping Cart Management</title>
+</head>
+
+<body>
+
+<h2>Shopping Cart Analyzer</h2>
+<div id="display"></div>
+
+<script>
+
+let cart = [
+  { id: 1, product: "Laptop", price: 60000, qty: 1 },
+  { id: 2, product: "Headphones", price: 2000, qty: 2 },
+  { id: 3, product: "Mouse", price: 800, qty: 1 }
+];
+
+let screen = document.getElementById("display");
+
+
+let totalCartValue = cart.reduce(
+    (sum, item) => sum + (item.price * item.qty), 0
+);
+screen.innerHTML += "<b>Total Cart Value:</b> ₹" + totalCartValue + "<br><br>";
+
+
+let increasedCart = cart.map(item =>
+    item.id === 2 ? { ...item, qty: item.qty + 1 } : item
+);
+screen.innerHTML += "<b>Quantity Updated (ID 2)</b><br>";
+increasedCart.forEach(i =>
+    screen.innerHTML += i.product + " Qty: " + i.qty + "<br>"
+);
+
+
+let removedCart = cart.filter(item => item.id !== 3);
+screen.innerHTML += "<br><b>After Removing Product ID 3</b><br>";
+removedCart.forEach(i =>
+    screen.innerHTML += i.product + "<br>"
+);
+
+
+let discountedCart = cart.map(item =>
+    item.price > 10000
+        ? { ...item, price: item.price * 0.9 }
+        : item
+);
+
+screen.innerHTML += "<br><b>Discount Applied</b><br>";
+discountedCart.forEach(i =>
+    screen.innerHTML += i.product + " ₹" + i.price + "<br>"
+);
+
+
+let sortedCart =
+[...cart].sort(
+    (a,b)=> (a.price*a.qty) - (b.price*b.qty)
+);
+
+screen.innerHTML += "<br><b>Sorted by Item Total</b><br>";
+sortedCart.forEach(i =>
+    screen.innerHTML += i.product +
+    " = ₹" + (i.price*i.qty) + "<br>"
+);
+
+
+let expensiveItem = cart.some(i => i.price > 50000);
+screen.innerHTML += "<br><b>Any Item > ₹50,000?</b> "
++ expensiveItem + "<br>";
+
+
+let stockCheck = cart.every(i => i.qty > 0);
+screen.innerHTML += "<b>All Items In Stock?</b> "
++ stockCheck + "<br><br>";
+
+
+
+let invoice = cart
+.map(i => i.product + " x" + i.qty + " = ₹" + (i.price*i.qty))
+.join("<br>");
+
+screen.innerHTML += "<b>Invoice</b><br>" + invoice + "<br><br>";
+
+
+let costlyProduct =
+cart.reduce((max,item)=>
+    item.price > max.price ? item : max
+);
+
+screen.innerHTML += "<b>Most Expensive Product:</b> "
++ costlyProduct.product + "<br>";
+
+
+let gst = totalCartValue * 0.18;
+screen.innerHTML += "<b>GST (18%):</b> ₹" + gst.toFixed(2);
+
+</script>
+
+</body>
+</html>
