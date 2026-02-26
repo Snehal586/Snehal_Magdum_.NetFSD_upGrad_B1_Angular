@@ -23,8 +23,7 @@ console.log("First Non-Repeating:", firstNonRepeat);
 let rotateBy = 2;
 
 let rotatedArray =
-    numbers.slice(rotateBy)
-    .concat(numbers.slice(0, rotateBy));
+    numbers.slice(rotateBy).concat(numbers.slice(0, rotateBy));
 
 console.log("Rotated Array:", rotatedArray);
 
@@ -50,3 +49,4 @@ for(let i=0;i<arr.length;i++){
 }
 
 console.log("Missing Number:", missingNumber);
+
