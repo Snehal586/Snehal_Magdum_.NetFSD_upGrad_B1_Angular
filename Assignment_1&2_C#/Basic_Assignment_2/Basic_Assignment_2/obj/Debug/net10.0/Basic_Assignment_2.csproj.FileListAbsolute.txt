@@ -1,0 +1,14 @@
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\bin\Debug\net10.0\Basic_Assignment_2.exe
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\bin\Debug\net10.0\Basic_Assignment_2.deps.json
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\bin\Debug\net10.0\Basic_Assignment_2.runtimeconfig.json
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\bin\Debug\net10.0\Basic_Assignment_2.dll
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\bin\Debug\net10.0\Basic_Assignment_2.pdb
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\obj\Debug\net10.0\Basic_Assignment_2.GeneratedMSBuildEditorConfig.editorconfig
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\obj\Debug\net10.0\Basic_Assignment_2.AssemblyInfoInputs.cache
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\obj\Debug\net10.0\Basic_Assignment_2.AssemblyInfo.cs
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\obj\Debug\net10.0\Basic_Assignment_2.csproj.CoreCompileInputs.cache
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\obj\Debug\net10.0\Basic_Assignment_2.dll
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\obj\Debug\net10.0\refint\Basic_Assignment_2.dll
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\obj\Debug\net10.0\Basic_Assignment_2.pdb
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\obj\Debug\net10.0\Basic_Assignment_2.genruntimeconfig.cache
+G:\cgt_.net\C#_Dotnet\Assignments\Assignment_1\Basic_Assignment_2\Basic_Assignment_2\obj\Debug\net10.0\ref\Basic_Assignment_2.dll
